@@ -7,4 +7,4 @@ jobs:
       - name: greeting
         run: echo "hello world! first step"
       - name: second step
-        run: second step
+        run: echo "second step"
