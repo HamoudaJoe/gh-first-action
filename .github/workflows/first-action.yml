@@ -18,7 +18,7 @@ jobs:
 
       - name: check 
         run: |
-          gcloud auth list
+          gcloud auth login `github-actions@sandbox-ajerbi.iam.gserviceaccount.com`
       - name: Stocker le fichier
         run: |
           gsutil cp .github/workflows/test.txt gs://github-actions-123
