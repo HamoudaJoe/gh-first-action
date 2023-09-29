@@ -18,4 +18,4 @@ jobs:
 
       - name: Stocker le fichier
         run: |
-          gsutil cp ./test.txt gs://github-actions-123
+          gsutil cp test.txt gs://github-actions-123
