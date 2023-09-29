@@ -19,3 +19,4 @@ jobs:
       - name: Stocker le fichier
         run: |
           gsutil cp .github/workflows/test.txt gs://github-actions-123
+
