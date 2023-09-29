@@ -16,6 +16,9 @@ jobs:
           project-id: ${{ secrets.GCP_PROJECT_ID }}
           service-account-key-file: ${{ secrets.GCP_SA_KEY_FILE }}
 
+      - name: check 
+        run: |
+          gcloud auth list
       - name: Stocker le fichier
         run: |
           gsutil cp .github/workflows/test.txt gs://github-actions-123
