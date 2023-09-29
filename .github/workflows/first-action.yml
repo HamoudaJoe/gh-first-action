@@ -9,9 +9,9 @@ jobs:
   store-file:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: 'actions/checkout@v2'
 
-      - uses: google-github-actions/setup-gcloud@master
+      - uses: 'google-github-actions/setup-gcloud@v1'
         with:
           project-id: ${{ secrets.GCP_PROJECT_ID }}
           service-account-key-file: ${{ secrets.GCP_SA_KEY_FILE }}
