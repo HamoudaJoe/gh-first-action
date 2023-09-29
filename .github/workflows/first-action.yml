@@ -14,8 +14,8 @@ jobs:
       - name: check 
         run: |
           echo "Hello"
-          echo ${{ secrets.GCP_PROJECT_ID }}
-          echo ${{ secrets.GCP_SA_KEY_FILE }}
+          echo $GCP_PROJECT_ID 
+          echo GCP_SA_KEY_FILE
           
       - uses: 'google-github-actions/setup-gcloud@v1'
         with:
