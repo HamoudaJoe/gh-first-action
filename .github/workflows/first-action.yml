@@ -19,8 +19,8 @@ jobs:
           
       - uses: 'google-github-actions/setup-gcloud@v1'
         with:
-          project-id: ${{ secrets.GCP_PROJECT_ID }}
-          service-account-key-file: ${{ secrets.GCP_SA_KEY_FILE }}
+          project-id: $GCP_PROJECT_ID 
+          service-account-key-file: $GCP_SA_KEY_FILE
 
       - name: Stocker le fichier
         run: |
