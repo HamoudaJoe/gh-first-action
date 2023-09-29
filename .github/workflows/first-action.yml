@@ -11,14 +11,17 @@ jobs:
     steps:
       - uses: 'actions/checkout@v2'
 
+      - name: check 
+        run: |
+          echo "Hello"
+          echo ${{ secrets.GCP_PROJECT_ID }}
+          echo ${{ secrets.GCP_SA_KEY_FILE }}
+          
       - uses: 'google-github-actions/setup-gcloud@v1'
         with:
           project-id: ${{ secrets.GCP_PROJECT_ID }}
           service-account-key-file: ${{ secrets.GCP_SA_KEY_FILE }}
 
-      - name: check 
-        run: |
-          gcloud auth login `github-actions@sandbox-ajerbi.iam.gserviceaccount.com`
       - name: Stocker le fichier
         run: |
           gsutil cp .github/workflows/test.txt gs://github-actions-123
